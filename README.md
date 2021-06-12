@@ -1,24 +1,17 @@
-# README
+# Friends API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Es una api donde puedes realizar operaciones CRUD de tus amigos.
 
-Things you may want to cover:
+## Instalación
 
-* Ruby version
+Por definir.
 
-* System dependencies
+```bash
+rails s
+```
 
-* Configuration
+## Usage
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Friend.create(
+    {
+        name: "Gerardo",
+        lastName:"Hau",
+        age:23,
+        active:true
+    }
+)
+
+Friend.create(
+    {
+        name: "Erick",
+        lastName:"Lechuga",
+        age:22,
+        active:true
+    }
+)
+
+Friend.create(
+    {
+        name: "Roberto",
+        lastName:"Mojica",
+        age:22,
+        active:true
+    }
+)
+
