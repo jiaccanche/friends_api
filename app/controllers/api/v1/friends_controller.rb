@@ -3,6 +3,9 @@ module Api
         #Mapeo de api version 1
         class FriendsController < ApplicationController
             
+            #skip auth
+            skip_before_action :verify_authenticity_token
+            
             def index
                 friends = Friend.order('id')
 
@@ -15,7 +18,7 @@ module Api
 
             def show
 
-                friend = Friend.find( param[:id] )
+                friend = Friend.find( params[:id] )
 
                 render json: {
                     status: 'EXITOSO',
@@ -25,7 +28,7 @@ module Api
             end
 
             def create
-
+                puts "init - process"
                 friend = Friend.new( friend_params )
                 
                 if friend.save
@@ -45,8 +48,8 @@ module Api
 
             def update
                 friend = Friend.find( params[:id] )
-                
-                if friend.update_attributes(  friend_params )
+
+                if friend.update(  friend_params )
                     
                     render json: {
                         status: 'EXITOSO',
@@ -88,7 +91,8 @@ module Api
 
             private
             def friend_params
-                params.permit(:name, :lastName, :age, :active)
+                puts "get params process"
+                params.require(:friend).permit(:name, :lastName, :age, :active, :id)
             end
         
         end
